@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Scrollama: *Edited* Sticky Side Example</title>
+	<meta name="description" content="Scrollama: Sticky Side Example" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="style.css" />
+	<style>
+		#scrolly {
+			position: relative;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			background-color: #f3f3f3;
+			padding: 1rem;
+		}
+
+		#scrolly>* {
+			-webkit-box-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+		}
+
+		article {
+			position: relative;
+			padding: 0 1rem;
+			max-width: 20rem;
+		}
+
+		figure {
+			position: -webkit-sticky;
+			position: sticky;
+			width: 100%;
+			margin: 0;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			/*	background-color: #8a8a8a; */
+			z-index: 0;
+		}
+
+		/* scrolly図の画像を画面に収める */
+		figure .img {
+			max-height: 90vh;
+			width: auto;
+			object-fit: contain;
+		}
+
+		figure p {
+			text-align: center;
+			padding: 1rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			font-size: 8rem;
+			font-weight: 900;
+			color: #fff;
+			display: none;
+			/* 番号を非表示にする */
+		}
+
+		.step {
+			margin: 0 auto 2rem auto;
+			background-color: #3b3b3b;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.step:last-child {
+			margin-bottom: 0;
+		}
+
+		.step.is-active {
+			background-color: goldenrod;
+			color: #3b3b3b;
+		}
+
+		.step p {
+			text-align: center;
+			padding: 1rem;
+			font-size: 1.5rem;
+		}
+
+		/*	追加	*/
+		.img {
+			width: 100%;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+		}
+
+		/* intro セクションの画像スタイル */
+		#intro .img {
+			width: 100vw !important;
+			max-width: none !important;
+			height: auto;
+			margin-left: calc(-50vw + 50%);
+			margin-right: calc(-50vw + 50%);
+			margin-top: auto;
+			margin-bottom: auto;
+			border: 2px solid #8a8a8a;
+		}
+
+		/* intro セクションの画像スタイル */
+		#outro .img {
+			width: 100vw !important;
+			max-width: none !important;
+			height: auto;
+			margin-left: calc(-50vw + 50%);
+			margin-right: calc(-50vw + 50%);
+			margin-top: auto;
+			margin-bottom: auto;
+			border: 2px solid #8a8a8a;
+		}
+
+		/* outro セクションの見出しをセンター寄せ */
+		#outro h1 {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+
+	<main>
+
+		<section id="intro">
+			<!-- <h1 class="intro__hed">How the charts were made?</h1> -->
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+
+			<h1>Sourcing and cleaning data are all hard</h1>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+
+			<img src="a1.png" alt="Panda Map" class="img">
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<img src="a2.png" alt="Panda Map" class="img">
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<img src="a3.png" alt="Panda Map" class="img">
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<img src="a4.png" alt="Panda Map" class="img">
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+
+			<h1>DataWrapper doesn't solve all the problems.</h1>
+			<br>
+			<br>
+			<br>
+			<br>
+			<img src="1.jpg" alt="Panda Map" class="img">
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</section>
+
+		<section id="intro">
+			<h1>Manual layering with Illustrator</h1>
+		</section>
+
+		<section id="scrolly">
+			<article>
+				<div class="step" data-step="1">
+					<p>STEP 1</p>
+				</div>
+				<div class="step" data-step="2">
+					<p>STEP 2</p>
+				</div>
+				<div class="step" data-step="3">
+					<p>STEP 3</p>
+				</div>
+				<div class="step" data-step="4">
+					<p>STEP 4</p>
+				</div>
+				<div class="step" data-step="5">
+					<p>STEP 5</p>
+				</div>
+				<div class="step" data-step="6">
+					<p>STEP 6</p>
+				</div>
+				<!-- <div class="step" data-step="7">
+					<p>STEP 7</p>
+				</div> 
+				<div class="step" data-step="8">
+					<p>STEP 8</p>
+				</div> -->
+			</article>
+
+			<figure>
+				<img src="2.svg" alt="Chart" class="img">
+				<p>0</p>
+			</figure>
+		</section>
+
+		<section id="outro">
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h1>Ai2HTML does the job</h1>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<figure>
+				<img src="8.jpg" alt="Panda Map" class="img">
+			</figure>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<h1>Among the things I learned</h1>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<br>
+
+			<figure>
+				<img src="a5.png" alt="Panda Map" class="img">
+			</figure>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</section>
+	</main>
+
+	<!-- <div class='debug'></div> -->
+	<script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+	<script src="scrollama.min.js"></script>
+	<script>
+		// using d3 for convenience
+		var main = d3.select("main");
+		var scrolly = main.select("#scrolly");
+		var figure = scrolly.select("figure");
+		var article = scrolly.select("article");
+		var step = article.selectAll(".step");
+
+		// initialize the scrollama
+		var scroller = scrollama();
+
+		// generic window resize listener event
+		function handleResize() {
+			// 1. update height of step elements
+			var stepH = Math.floor(window.innerHeight * 0.75);
+			step.style("height", stepH + "px");
+
+			var figureHeight = window.innerHeight * 0.9; // 高さを80%に増加
+			var figureMarginTop = window.innerHeight * 0.05; // 上余白を5%に固定
+
+			figure
+				.style("height", figureHeight + "px")
+				.style("top", figureMarginTop + "px");
+
+			// 3. tell scrollama to update new element dimensions
+			scroller.resize();
+		}
+
+		// scrollama event handlers
+		function handleStepEnter(response) {
+			console.log(response);
+			// response = { element, direction, index }
+
+			// add color to current step only
+			step.classed("is-active", function (d, i) {
+				return i === response.index;
+			});
+
+			// update graphic based on step
+			figure.select("p").text(response.index + 1);
+
+			// 画像を変更する - 
+			var imageFiles = ["2.svg", "3.svg", "4.svg", "5.svg", "6.jpg", "7.jpg"]; // ステップに対応する画像ファイル
+			var currentImage = imageFiles[response.index] || "2.svg";
+			figure.select("img").attr("src", currentImage);
+		}
+
+		function init() {
+
+			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
+			handleResize();
+
+			// 2. setup the scroller passing options
+			// 		this will also initialize trigger observations
+			// 3. bind scrollama event handlers (this can be chained like below)
+			scroller
+				.setup({
+					step: "#scrolly article .step",
+					offset: 0.33,
+					debug: false
+				})
+				.onStepEnter(handleStepEnter);
+		}
+
+		// kick things off
+		init();
+	</script>
+</body>
+
+</html>
